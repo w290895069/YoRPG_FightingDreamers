@@ -11,12 +11,7 @@
 //HW28 - Ye Olde Role Playing Game
 //2017-11-08
 
-public class Protagonist {
-	String name; //name of protagonist defined by constructor
-	int HP; //health points
-	int atk; //attack; determines damage dealt
-	int def; //defense; determines damage taken
-	double attackRating; //attack modifier
+public class Protagonist extends Character {
 	
 	public Protagonist (String s) { //constructor
 		name = s; //takes name input
@@ -25,26 +20,7 @@ public class Protagonist {
 		def = 40;
 		attackRating = 0.4;
 	}
-	
-	public boolean isAlive() { //returns boolean indicating living or dead
-		return HP > 0;
-	}
-	public int getDefense() { //returns value of def attribute
-		return def;
-	}
-	public String getName() { //returns value of name attribute
-		return name;
-	}
-	public void lowerHP(int i) { //takes an int parameter, decreases life attribute by that amount
-		HP -= i;
-	}
-	
-	public int attack(Monster smaug) {
-		int dmg = (int) (atk*attackRating)-smaug.getDefense();
-		smaug.lowerHP(dmg);
-		return dmg;
-	}
-	
+    
 	public void specialize() {
 		atk *= 2;
 		def /= 2;

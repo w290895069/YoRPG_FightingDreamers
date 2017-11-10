@@ -11,13 +11,7 @@
 //HW28 - Ye Olde Role Playing Game
 //2017-11-08
 
-public class Monster {
-	String name; //name of protagonist defined by constructor
-	int HP; //health points
-	int atk; //attack; determines damage dealt
-	int def; //defense; determines damage taken
-	double attackRating; //attack modifier
-	
+public class Monster extends Character {
 	int randRange(int min, int max) { //I honestly don't know why this isn't just a part of Java. I'm so exhausted.
 		int range = (max - min) + 1;     
 		return (int)(Math.random() * range) + min;
@@ -29,24 +23,5 @@ public class Monster {
 		atk = randRange(21,65);
 		def = 20;
 		attackRating = 1;
-	}
-	
-	public boolean isAlive() { //returns boolean indicating living or dead
-		return HP > 0;
-	}
-	public int getDefense() { //returns value of def attribute
-		return def;
-	}
-	public String getName() { //returns value of name attribute
-		return name;
-	}
-	public void lowerHP(int i) { //takes an int parameter, decreases life attribute by that amount
-		HP -= i;
-	}
-	
-	public int attack(Protagonist pat) {
-		int dmg = (int) (atk*attackRating)-pat.getDefense();
-		pat.lowerHP(dmg);
-		return dmg;
 	}
 }
