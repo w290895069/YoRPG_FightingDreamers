@@ -16,5 +16,17 @@
 
 public class Bastion extends Protagonist {
     
+    public Bastion(String s){
+        name = s; //takes name input
+		HP = 200;
+		atk = 60;
+		def = 70;
+		attackRating = 0.4;
+    }
+    
+    public void specialize() {
+		atk /= 2;
+		def *= 2;
+	}
     
 }
