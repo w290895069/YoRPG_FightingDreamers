@@ -12,11 +12,11 @@
 //2017-11-10
 
 public class Character {
-    String name; //name of protagonist defined by constructor
-    int HP; //health points
-    int atk; //attack; determines damage dealt
-    int def; //defense; determines damage taken
-    double attackRating; //attack modifier
+    protected String name; //name of protagonist defined by constructor
+    protected int HP; //health points
+    protected int atk; //attack; determines damage dealt
+    protected int def; //defense; determines damage taken
+    protected double attackRating; //attack modifier
     
     public boolean isAlive() { //returns boolean indicating living or dead
 	return HP > 0;
@@ -33,6 +33,9 @@ public class Character {
 	
     public int attack(Character smaug) {
 	int dmg = (int) (atk*attackRating)-smaug.getDefense();
+	if (dmg < 0) {
+	    dmg = 0;
+	}
 	smaug.lowerHP(dmg);
 	return dmg;
     }
