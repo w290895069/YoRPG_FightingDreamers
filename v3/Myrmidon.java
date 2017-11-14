@@ -15,6 +15,19 @@
 //"Specialize" increases ATK and lowers DEF.
 
 public class Myrmidon extends Protagonist {
-    
+    public Myrmidon(String a){
+	name = a;
+	HP = 70;
+	atk = 150;
+	def = 150;
+	attackRating 0.4;
+    }
+    public void spec(){
+	atk +=15;
+	def +=15;
+	if (HP > 0) HP -=10;
+    }
+    public String about(){
+	return "The Myrmidon is fast and agile, having a low HP but strong attack and defense skills. These ruffians are the subordinates of higher level monsters, and their skills in warfare and attitude come together to form a somewhat effective and somehow a definitely more annoying version of the minions from Despicable Me."
     
 }
