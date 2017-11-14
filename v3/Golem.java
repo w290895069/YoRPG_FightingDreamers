@@ -10,31 +10,21 @@
 //HW31 - Ye Olde Role Playing Game, Expanded
 //2017-11-13
 
-//The Bastion is a walking tank, clad in heavy armor.
-//High HP, High DEF, low ATK.
-//"Specialize" increases DEF and lowers ATK.
+//The Golem is a hulking construct made of stone -
+//but once you pierce its tough exterior, you'll find it's rather frail.
+//Low HP, Low ATK, High DEF.
 
-public class Bastion extends Protagonist {
-    
-    public Bastion(String s){
-        name = s; //takes name input
-		HP = 110;
-		atk = 40;
-		def = 110;
-		attackRating = 0.4;
-    }
-    
-    public void specialize() {
-		atk /= 2;
-		def *= 2;
-	}
+public class Golem extends Monster {
 	
-	public void normalize() {
-		atk = 40;
-		def = 110;
+	public Golem () { //constructor
+		name = "Ye olde golem";
+		HP = 80;
+		atk = randRange(20, 40);
+		def = 35;
+		attackRating = 1;
 	}
     
 	public String about() {
-		return "The Bastion is a walking tank, clad in heavy armor. High HP, High DEF, low ATK. Specialize increases DEF and lowers ATK.";
+		return "The Golem is a hulking construct made of stone - but once you pierce its tough exterior, you'll find it's rather frail. Low HP, Low ATK, High DEF.";
 	}
 }

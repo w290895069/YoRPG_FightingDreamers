@@ -10,7 +10,7 @@
 //HW31 - Ye Olde Role Playing Game, Expanded
 //2017-11-13
 
-//The Dragon is a high-daamge but low-defense Monster.
+//The Dragon is a scaled beast that breathes flame - but, in this game, he's more bite than bark.
 //Low HP, Low DEF, High ATK.
 
 public class Dragon extends Monster {
@@ -23,4 +23,7 @@ public class Dragon extends Monster {
 		attackRating = 1;
 	}
     
+	public String about() {
+		return "The Dragon is a scaled beast that breathes flame - but, in this game, he's more bite than bark. Low HP, Low DEF, High ATK.";
+	}
 }

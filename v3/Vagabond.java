@@ -15,6 +15,26 @@
 //"Specialize" heals HP, but lowers attack until Normalize.
 
 public class Vagabond extends Protagonist {
+	
+    public Vagabond(String s){
+        name = s; //takes name input
+		HP = 110;
+		atk = 70;
+		def = 70;
+		attackRating = 0.4;
+    }
     
-    
+    public void specialize() {
+		HP += 25;
+		def /= 2;
+	}
+	
+	public void normalize() {
+		def = 70;
+	}
+	
+	public String about() {
+		return "The Vagabond is a resourceful jack-of-all-trades. Average attack, average defense, high HP. Specialize heals HP, but lowers attack until Normalize.";
+	}
+	
 }

@@ -10,31 +10,7 @@
 //HW31 - Ye Olde Role Playing Game, Expanded
 //2017-11-13
 
-//The Bastion is a walking tank, clad in heavy armor.
-//High HP, High DEF, low ATK.
-//"Specialize" increases DEF and lowers ATK.
-
-public class Bastion extends Protagonist {
-    
-    public Bastion(String s){
-        name = s; //takes name input
-		HP = 110;
-		atk = 40;
-		def = 110;
-		attackRating = 0.4;
-    }
-    
-    public void specialize() {
-		atk /= 2;
-		def *= 2;
-	}
-	
-	public void normalize() {
-		atk = 40;
-		def = 110;
-	}
-    
-	public String about() {
-		return "The Bastion is a walking tank, clad in heavy armor. High HP, High DEF, low ATK. Specialize increases DEF and lowers ATK.";
+public class Slime extends Monster {
+		return "An oozy enemy with slow, weak attacks and extremely soft skin - but with an extremely healthy core. Low ATK, low DEF, high HP.";
 	}
 }

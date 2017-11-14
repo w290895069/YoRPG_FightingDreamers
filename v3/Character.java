@@ -39,4 +39,8 @@ public class Character {
 	smaug.lowerHP(dmg);
 	return dmg;
     }
+	
+	public String about() {
+		return "This is a nondescript character. Wow!";
+	}
 }
