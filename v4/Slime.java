@@ -11,6 +11,7 @@
 //2017-11-13
 
 public class Slime extends Monster {
-		return "An oozy enemy with slow, weak attacks and extremely soft skin - but with an extremely healthy core. Low ATK, low DEF, high HP.";
-	}
+    public String about() {
+	return "An oozy enemy with slow, weak attacks and extremely soft skin - but with an extremely healthy core. Low ATK, low DEF, high HP.";
+    }
 }
