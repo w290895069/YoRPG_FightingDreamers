@@ -32,10 +32,11 @@ public class Character {
     }
 	
     public int attack(Character smaug) {
-	int dmg = (int) (atk*attackRating)-smaug.getDefense();
+	int dmg = (int) (atk * attackRating * 100 / (smaug.getDefense() + 100));
 	if (dmg < 0) {
 	    dmg = 0;
 	}
+    System.out.println(dmg);
 	smaug.lowerHP(dmg);
 	return dmg;
     }
