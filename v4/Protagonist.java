@@ -11,7 +11,7 @@
 //HW28 - Ye Olde Role Playing Game
 //2017-11-08
 
-public class Protagonist extends Character {
+public abstract class Protagonist extends Character {
 	
 	public Protagonist (String s) { //constructor
 		name = s; //takes name input
@@ -21,12 +21,9 @@ public class Protagonist extends Character {
 		attackRating = 0.4;
 	}
     
-	public void specialize() {
-		atk *= 2;
-		def /= 2;
-	}
-	public void normalize() {
-		atk = 100;
-		def = 40;
-	}
+	public abstract void specialize();
+    
+	public abstract void normalize();
+    
+    public abstract String about();
 }

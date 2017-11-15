@@ -12,6 +12,7 @@
 //2017-11-10
 
 public class Character {
+    
     protected String name; //name of protagonist defined by constructor
     protected int HP; //health points
     protected int atk; //attack; determines damage dealt
@@ -40,8 +41,5 @@ public class Character {
 	smaug.lowerHP(dmg);
 	return dmg;
     }
-	
-	public String about() {
-		return "This is a nondescript character. Wow!";
-	}
+
 }

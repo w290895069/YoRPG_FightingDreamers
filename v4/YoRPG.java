@@ -123,12 +123,12 @@ public class YoRPG
         
         if (monType == 0) {
             smaug = new Slime();
-        } else if (monType == 1) {
+        }
+        if (monType == 1) {
             smaug = new Golem();
-        } else if (monType == 2) {
+        }
+        if (monType == 2) {
             smaug = new Dragon();
-        } else {
-            smaug = new Monster();
         }
         
 	    while( smaug.isAlive() && pat.isAlive() ) {
