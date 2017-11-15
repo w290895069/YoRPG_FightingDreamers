@@ -17,11 +17,10 @@
 public class Vagabond extends Protagonist {
 	
     public Vagabond(String s){
-        name = s; //takes name input
-		HP = 110;
-		atk = 70;
-		def = 70;
-		attackRating = 0.4;
+        super(s); //takes name input
+		HP = 100;
+		atk = 120;
+		def = 40;
     }
     
     public void specialize() {
@@ -30,7 +29,7 @@ public class Vagabond extends Protagonist {
 	}
 	
 	public void normalize() {
-		def = 70;
+		def = 40;
 	}
 	
 	public String about() {

@@ -11,6 +11,17 @@
 //2017-11-13
 
 public class Slime extends Monster {
+    
+    public Slime () { //constructor
+        super();
+		name = "Ye olde slime";
+		HP = 250;
+		atk = randRange(10, 45);
+		def = 10;
+		attackRating = 0.8;
+	}
+    
+    public String about(){
 		return "An oozy enemy with slow, weak attacks and extremely soft skin - but with an extremely healthy core. Low ATK, low DEF, high HP.";
 	}
 }
