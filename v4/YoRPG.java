@@ -119,8 +119,18 @@ public class YoRPG
     else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
 
-	    smaug = new Monster();
-
+        int monType = (int)(Math.random() * 3);
+        
+        if (monType == 0) {
+            smaug = new Slime();
+        } else if (monType == 1) {
+            smaug = new Golem();
+        } else if (monType == 2) {
+            smaug = new Dragon();
+        } else {
+            smaug = new Monster();
+        }
+        
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
         // Give user the option of using a special attack:
