@@ -12,6 +12,7 @@
 //2017-11-10
 
 public class Character {
+    
     protected String name; //name of protagonist defined by constructor
     protected int HP; //health points
     protected int atk; //attack; determines damage dealt
@@ -19,28 +20,25 @@ public class Character {
     protected double attackRating; //attack modifier
     
     public boolean isAlive() { //returns boolean indicating living or dead
-	return HP > 0;
+        return HP > 0;
     }
     public int getDefense() { //returns value of def attribute
-	return def;
+        return def;
     }
     public String getName() { //returns value of name attribute
-	return name;
+        return name;
     }
     public void lowerHP(int i) { //takes an int parameter, decreases life attribute by that amount
-	HP -= i;
+        HP -= i;
     }
 	
     public int attack(Character smaug) {
-	int dmg = (int) (atk*attackRating)-smaug.getDefense();
-	if (dmg < 0) {
-	    dmg = 0;
-	}
-	smaug.lowerHP(dmg);
-	return dmg;
+        int dmg = (int) (atk * attackRating * 100 / (smaug.getDefense() + 100));
+        if (dmg < 0) {
+            dmg = 0;
+        }
+        smaug.lowerHP(dmg);
+        return dmg;
     }
-	
-	public String about() {
-		return "This is a nondescript character. Wow!";
-	}
+
 }

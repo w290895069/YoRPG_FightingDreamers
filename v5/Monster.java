@@ -11,7 +11,8 @@
 //HW28 - Ye Olde Role Playing Game
 //2017-11-08
 
-public class Monster extends Character {
+public abstract class Monster extends Character {
+    
 	int randRange(int min, int max) { //I honestly don't know why this isn't just a part of Java. I'm so exhausted.
 		int range = (max - min) + 1;     
 		return (int)(Math.random() * range) + min;
@@ -24,4 +25,7 @@ public class Monster extends Character {
 		def = 20;
 		attackRating = 1;
 	}
+    
+    public abstract String about();
+    
 }

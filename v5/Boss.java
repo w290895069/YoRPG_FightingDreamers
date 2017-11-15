@@ -10,21 +10,17 @@
 //HW31 - Ye Olde Role Playing Game, Expanded
 //2017-11-13
 
-//The Dragon is a scaled beast that breathes flame - but, in this game, he's more bite than bark.
-//Low HP, Low DEF, High ATK.
-
-public class Dragon extends Monster {
-	
-	public Dragon () { //constructor
+public class Boss extends Monster {
+    
+    public Boss () { //constructor
         super();
-		name = "Ye olde dragon";
-		HP = 80;
-		atk = randRange(60, 100);
-		def = 10;
-		attackRating = 1;
+		name = "Ye olde BOSS";
+		HP = 500;
+		atk = randRange(50, 80);
+		def = 30;
 	}
     
-	public String about() {
-		return "The Dragon is a scaled beast that breathes flame - but, in this game, he's more bite than bark. Low HP, Low DEF, High ATK.";
+    public String about(){
+		return "The final boss approaching...";
 	}
 }

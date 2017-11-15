@@ -17,11 +17,10 @@
 public class Bastion extends Protagonist {
     
     public Bastion(String s){
-        name = s; //takes name input
-		HP = 110;
-		atk = 40;
-		def = 110;
-		attackRating = 0.4;
+        super(s); //takes name input
+		HP = 200;
+		atk = 70;
+		def = 90;
     }
     
     public void specialize() {
@@ -30,8 +29,8 @@ public class Bastion extends Protagonist {
 	}
 	
 	public void normalize() {
-		atk = 40;
-		def = 110;
+		atk = 60;
+		def = 60;
 	}
     
 	public String about() {
