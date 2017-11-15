@@ -16,6 +16,7 @@
 public class Dragon extends Monster {
 	
 	public Dragon () { //constructor
+        super();
 		name = "Ye olde dragon";
 		HP = 80;
 		atk = randRange(60, 100);
