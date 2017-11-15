@@ -22,6 +22,7 @@ public class YoRPG
   private int moveCount;
   private boolean gameOver;
   private int difficulty;
+  private int role;
 
   private InputStreamReader isr;
   private BufferedReader in;
@@ -74,8 +75,30 @@ public class YoRPG
     }
     catch ( IOException e ) { }
 
+    s = "\nChoose your character: \n";
+    s += "\t1: Myrmidon\n";
+    s += "\t2: Vagabond\n";
+    s += "\t3: Bastion\n";
+    s += "Selection: ";
+    System.out.print( s );
+
+    try {
+	role = Integer.parseInt( in.readLine() );
+    }
+    catch ( IOException e) { }
+
+    if (role == 1){
+	pat = new Myrmidon( name );
+    }
+    if (role == 2){
+	pat = new Vagabond( name );
+    }
+    if (role == 3){
+	pat = new Bastion( name );
+    }
+
     //instantiate the player's character
-    pat = new Protagonist( name );
+    //pat = new Protagonist( name );
 
   }//end newGame()
 
@@ -96,8 +119,18 @@ public class YoRPG
     else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
 
-	    smaug = new Monster();
-
+        int monType = (int)(Math.random() * 3);
+        
+        if (monType == 0) {
+            smaug = new Slime();
+        } else if (monType == 1) {
+            smaug = new Golem();
+        } else if (monType == 2) {
+            smaug = new Dragon();
+        } else {
+            smaug = new Monster();
+        }
+        
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
         // Give user the option of using a special attack:

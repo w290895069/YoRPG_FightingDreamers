@@ -17,6 +17,7 @@
 public class Golem extends Monster {
 	
 	public Golem () { //constructor
+        super();
 		name = "Ye olde golem";
 		HP = 80;
 		atk = randRange(20, 40);
